@@ -71,7 +71,7 @@ public class Book {
     public Book() {
     }
 
-    public Book(String isbn, String image, String name, String place, Integer quantity, LocalDate releaseDate, Integer tome, Publisher publisher, Series series, List<Genre> genres, List<Author> authors, List<Keyword> keywords, List<Loan> loans, List<News> news) {
+    public Book(String isbn, String image, String name, String place, Integer quantity, LocalDate releaseDate, Integer tome, Publisher publisher, Series series, List<Genre> genres, List<Author> authors, List<Keyword> keywords) {
         this.isbn = isbn;
         this.image = image;
         this.name = name;
@@ -84,10 +84,9 @@ public class Book {
         this.genres = genres;
         this.authors = authors;
         this.keywords = keywords;
-        this.loans = loans;
-        this.news = news;
+        this.loans = null;
+        this.news = null;
     }
-
 
     public Long getBookId() {
         return bookId;

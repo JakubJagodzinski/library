@@ -26,7 +26,18 @@ public class RunAtStart {
 
 
     @Autowired
-    public RunAtStart(AccountRepository accountRepository, AuthorRepository authorRepository, BookRepository bookRepository, GenreRepository genreRepository, KeywordRepository keywordRepository, LoanRepository loanRepository, NewsRepository newsRepository, PublisherRepository publisherRepository, SeriesRepository seriesRepository, UserDataRepository userDataRepository) {
+    public RunAtStart(
+            AccountRepository accountRepository,
+            AuthorRepository authorRepository,
+            BookRepository bookRepository,
+            GenreRepository genreRepository,
+            KeywordRepository keywordRepository,
+            LoanRepository loanRepository,
+            NewsRepository newsRepository,
+            PublisherRepository publisherRepository,
+            SeriesRepository seriesRepository,
+            UserDataRepository userDataRepository
+    ) {
         super();
         this.accountRepository = accountRepository;
         this.authorRepository = authorRepository;
@@ -85,9 +96,9 @@ public class RunAtStart {
             accountRepository.saveAll(List.of(account1, account2, account3));
 
             // Books
-            Book book1 = new Book("978-1234567890", "book1.jpg", "The Lost World", "London", 12, LocalDate.of(2020, 5, 15), 320, publisher1, series1, List.of(genre1), List.of(author1), List.of(keyword1), null, null);
-            Book book2 = new Book("978-2345678901", "book2.jpg", "Magic in the Forest", "Paris", 18, LocalDate.of(2018, 7, 1), 450, publisher2, series2, List.of(genre2), List.of(author2), List.of(keyword2), null, null);
-            Book book3 = new Book("978-3456789012", "book3.jpg", "The Detective's Secret", "Berlin", 10, LocalDate.of(2019, 9, 10), 250, publisher3, series3, List.of(genre3), List.of(author3), List.of(keyword3), null, null);
+            Book book1 = new Book("978-1234567890", "book1.jpg", "The Lost World", "London", 12, LocalDate.of(2020, 5, 15), 320, publisher1, series1, List.of(genre1), List.of(author1), List.of(keyword1));
+            Book book2 = new Book("978-2345678901", "book2.jpg", "Magic in the Forest", "Paris", 18, LocalDate.of(2018, 7, 1), 450, publisher2, series2, List.of(genre2), List.of(author2), List.of(keyword2));
+            Book book3 = new Book("978-3456789012", "book3.jpg", "The Detective's Secret", "Berlin", 10, LocalDate.of(2019, 9, 10), 250, publisher3, series3, List.of(genre3), List.of(author3), List.of(keyword3));
             bookRepository.saveAll(List.of(book1, book2, book3));
 
             // Loans
