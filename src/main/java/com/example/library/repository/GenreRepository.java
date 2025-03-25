@@ -1,7 +1,7 @@
 package com.example.library.repository;
 
 import com.example.library.model.Genre;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface GenreRepository extends CrudRepository<Genre, Long> {
+public interface GenreRepository extends JpaRepository<Genre, Long> {
 }

@@ -1,7 +1,7 @@
 package com.example.library.repository;
 
 import com.example.library.model.Loan;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface LoanRepository extends CrudRepository<Loan, Long> {
+public interface LoanRepository extends JpaRepository<Loan, Long> {
 }
