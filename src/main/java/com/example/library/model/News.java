@@ -1,11 +1,15 @@
 package com.example.library.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
 @Entity(name = "News")
 @Table(name = "news")
+@NoArgsConstructor
+@Data
 public class News {
 
     @Id
@@ -26,74 +30,11 @@ public class News {
     @JoinColumn(name = "book_id", referencedColumnName = "book_id")
     private Book book;
 
-    public News() {
-    }
-
     public News(String image, LocalDate newsDate, String text, String title, Book book) {
         this.image = image;
         this.newsDate = newsDate;
         this.text = text;
         this.title = title;
         this.book = book;
-    }
-
-    public Long getNewsId() {
-        return newsId;
-    }
-
-    public void setNewsId(Long newsId) {
-        this.newsId = newsId;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public LocalDate getNewsDate() {
-        return newsDate;
-    }
-
-    public void setNewsDate(LocalDate newsDate) {
-        this.newsDate = newsDate;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public Book getBook() {
-        return book;
-    }
-
-    public void setBook(Book book) {
-        this.book = book;
-    }
-
-    @Override
-    public String toString() {
-        return "News{" +
-                "newsId=" + newsId +
-                ", image='" + image + '\'' +
-                ", newsDate=" + newsDate +
-                ", text='" + text + '\'' +
-                ", title='" + title + '\'' +
-                ", book=" + book +
-                '}';
     }
 }

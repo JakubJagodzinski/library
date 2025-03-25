@@ -1,12 +1,17 @@
 package com.example.library.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity(name = "Keyword")
 @Table(name = "keywords")
+@NoArgsConstructor
+@Data
 public class Keyword {
 
     @Id
@@ -17,40 +22,10 @@ public class Keyword {
     private String name;
 
     @ManyToMany(mappedBy = "keywords")
+    @ToString.Exclude
     private final List<Book> books = new ArrayList<>();
-
-    public Keyword() {
-    }
 
     public Keyword(String name) {
         this.name = name;
-    }
-
-    public Long getKeywordId() {
-        return keywordId;
-    }
-
-    public void setKeywordId(Long keywordId) {
-        this.keywordId = keywordId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public List<Book> getBooks() {
-        return books;
-    }
-
-    @Override
-    public String toString() {
-        return "Keyword{" +
-                "keywordId=" + keywordId +
-                ", name='" + name + '\'' +
-                '}';
     }
 }

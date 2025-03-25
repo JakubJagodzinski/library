@@ -1,12 +1,17 @@
 package com.example.library.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity(name = "Publisher")
 @Table(name = "publishers")
+@NoArgsConstructor
+@Data
 public class Publisher {
 
     @Id
@@ -17,44 +22,10 @@ public class Publisher {
     private String name;
 
     @OneToMany(mappedBy = "publisher")
+    @ToString.Exclude
     private List<Book> books = new ArrayList<>();
-
-    public Publisher() {
-    }
 
     public Publisher(String name) {
         this.name = name;
-    }
-
-    public Long getPublisherId() {
-        return publisherId;
-    }
-
-    public void setPublisherId(Long publisherId) {
-        this.publisherId = publisherId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public List<Book> getBooks() {
-        return books;
-    }
-
-    public void setBooks(List<Book> books) {
-        this.books = books;
-    }
-
-    @Override
-    public String toString() {
-        return "Publisher{" +
-                "publisherId=" + publisherId +
-                ", name='" + name + '\'' +
-                '}';
     }
 }
