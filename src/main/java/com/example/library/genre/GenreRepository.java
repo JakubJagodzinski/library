@@ -1,6 +1,5 @@
-package com.example.library.repository;
+package com.example.library.genre;
 
-import com.example.library.model.Genre;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface GenreRepository extends JpaRepository<Genre, Long> {

@@ -1,7 +1,25 @@
 package com.example.library;
 
-import com.example.library.model.*;
-import com.example.library.repository.*;
+import com.example.library.account.Account;
+import com.example.library.account.AccountRepository;
+import com.example.library.author.Author;
+import com.example.library.author.AuthorRepository;
+import com.example.library.book.Book;
+import com.example.library.book.BookRepository;
+import com.example.library.genre.Genre;
+import com.example.library.genre.GenreRepository;
+import com.example.library.keyword.Keyword;
+import com.example.library.keyword.KeywordRepository;
+import com.example.library.loan.Loan;
+import com.example.library.loan.LoanRepository;
+import com.example.library.news.News;
+import com.example.library.news.NewsRepository;
+import com.example.library.publisher.Publisher;
+import com.example.library.publisher.PublisherRepository;
+import com.example.library.series.Series;
+import com.example.library.series.SeriesRepository;
+import com.example.library.userdata.UserData;
+import com.example.library.userdata.UserDataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;

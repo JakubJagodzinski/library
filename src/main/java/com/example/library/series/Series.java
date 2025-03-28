@@ -1,5 +1,6 @@
-package com.example.library.model;
+package com.example.library.series;
 
+import com.example.library.book.Book;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,24 +9,24 @@ import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity(name = "Author")
-@Table(name = "authors")
+@Entity(name = "Series")
+@Table(name = "series")
 @NoArgsConstructor
 @Data
-public class Author {
+public class Series {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "author_id")
-    private Long authorId;
+    @Column(name = "series_id")
+    private Long seriesId;
 
     private String name;
 
-    @ManyToMany(mappedBy = "authors")
+    @OneToMany(mappedBy = "series")
     @ToString.Exclude
     private List<Book> books = new ArrayList<>();
 
-    public Author(String name) {
+    public Series(String name) {
         this.name = name;
     }
 }

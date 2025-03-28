@@ -1,5 +1,6 @@
-package com.example.library.model;
+package com.example.library.account;
 
+import com.example.library.userdata.UserData;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;

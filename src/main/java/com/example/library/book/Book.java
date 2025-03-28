@@ -1,5 +1,12 @@
-package com.example.library.model;
+package com.example.library.book;
 
+import com.example.library.author.Author;
+import com.example.library.genre.Genre;
+import com.example.library.keyword.Keyword;
+import com.example.library.loan.Loan;
+import com.example.library.news.News;
+import com.example.library.publisher.Publisher;
+import com.example.library.series.Series;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;

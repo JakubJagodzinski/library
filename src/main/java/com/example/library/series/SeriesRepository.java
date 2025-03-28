@@ -1,6 +1,5 @@
-package com.example.library.repository;
+package com.example.library.series;
 
-import com.example.library.model.Series;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface SeriesRepository extends JpaRepository<Series, Long> {

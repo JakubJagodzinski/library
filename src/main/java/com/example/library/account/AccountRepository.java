@@ -1,6 +1,5 @@
-package com.example.library.repository;
+package com.example.library.account;
 
-import com.example.library.model.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AccountRepository extends JpaRepository<Account, Long> {

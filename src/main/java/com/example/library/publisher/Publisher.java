@@ -1,5 +1,6 @@
-package com.example.library.model;
+package com.example.library.publisher;
 
+import com.example.library.book.Book;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;

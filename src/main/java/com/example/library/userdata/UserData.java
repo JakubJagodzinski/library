@@ -1,5 +1,7 @@
-package com.example.library.model;
+package com.example.library.userdata;
 
+import com.example.library.account.Account;
+import com.example.library.loan.Loan;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
